@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>P2P File Sharing - Send</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Share Files Directly</h1>
+            <div class="file-input">
+                <input type="file" id="fileInput" />
+                <button id="createShareBtn">Generate Share Link</button>
+            </div>
+
+            <div id="shareInfo" class="hidden">
+                <h2>Share Link</h2>
+                <div class="share-link-container">
+                    <input type="text" id="shareLink" readonly />
+                    <button id="copyBtn">Copy</button>
+                </div>
+                <p>Share this link with the receiver. Keep this page open until file transfer is complete.</p>
+                <div id="connectionStatus" class="status">Waiting for receiver...</div>
+            </div>
+
+            <div id="transferStatus" class="hidden">
+                <h2>Transfer Status</h2>
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                    <div id="progressText">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.11.0/simplepeer.min.js"></script> -->
+        <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+        <script src="/sender.js"></script>
+    </body>
+</html>

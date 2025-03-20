@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.file-input {
+  margin: 20px 0;
+}
+
+.share-link-container {
+  display: flex;
+  margin: 15px 0;
+}
+
+#shareLink {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+#copyBtn {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+#createShareBtn {
+  padding: 10px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.status {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.progress-container {
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  position: relative;
+  height: 30px;
+}
+
+.progress-bar {
+  background-color: #4CAF50;
+  height: 100%;
+  border-radius: 4px;
+  width: 0;
+  transition: width 0.3s;
+}
+
+#progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+#downloadBtn {
+  padding: 10px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.debug-info {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #ffffd9;
+  border-left: 4px solid #e7c000;
+  font-size: 14px;
+}
