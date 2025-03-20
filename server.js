@@ -2,7 +2,7 @@
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4, v4 } = require('uuid');
 const path = require('path');
 
 const app = express();
@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
     // Handle file share initiation
     socket.on('create-share', (callback) => {
         // Generate a real UUID for the share ID
-        const shareId = '123';
+        const shareId = v4();
         activeSessions[shareId] = {
             creatorId: socket.id,
             creatorPeerId: null,
@@ -177,4 +177,3 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-    
